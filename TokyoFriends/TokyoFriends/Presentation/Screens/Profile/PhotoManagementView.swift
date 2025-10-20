@@ -62,12 +62,12 @@ struct PhotoManagementView: View {
                             .font(Typography.headline)
                             .foregroundColor(ColorTokens.textPrimary)
 
-                        guidelineItem(icon: "checkmark.circle.fill", color: .green, text: "あなた自身が写っている写真")
-                        guidelineItem(icon: "checkmark.circle.fill", color: .green, text: "顔がはっきり見える写真")
-                        guidelineItem(icon: "checkmark.circle.fill", color: .green, text: "適切な服装の写真")
-                        guidelineItem(icon: "xmark.circle.fill", color: .red, text: "他人の写真、グループ写真")
-                        guidelineItem(icon: "xmark.circle.fill", color: .red, text: "不適切な内容を含む写真")
-                        guidelineItem(icon: "xmark.circle.fill", color: .red, text: "過度な加工・フィルター")
+                        guidelineItem(icon: "checkmark.circle.fill", color: ColorTokens.accentSuccess, text: "あなた自身が写っている写真")
+                        guidelineItem(icon: "checkmark.circle.fill", color: ColorTokens.accentSuccess, text: "顔がはっきり見える写真")
+                        guidelineItem(icon: "checkmark.circle.fill", color: ColorTokens.accentSuccess, text: "適切な服装の写真")
+                        guidelineItem(icon: "xmark.circle.fill", color: ColorTokens.accentDanger, text: "他人の写真、グループ写真")
+                        guidelineItem(icon: "xmark.circle.fill", color: ColorTokens.accentDanger, text: "不適切な内容を含む写真")
+                        guidelineItem(icon: "xmark.circle.fill", color: ColorTokens.accentDanger, text: "過度な加工・フィルター")
                     }
                     .padding(Spacing.m)
                     .background(ColorTokens.bgSection)

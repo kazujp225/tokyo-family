@@ -33,8 +33,8 @@ struct Profile: Identifiable, Codable, Equatable {
     /// 写真URL（最大5枚、任意）
     var photos: [String]
 
-    /// 写真表示順序
-    var photoOrder: [Int]
+    /// 写真表示順序（写真URLの配列）
+    var photoOrder: [String]
 
     // MARK: - Nested Types
 
@@ -53,6 +53,11 @@ struct Profile: Identifiable, Codable, Equatable {
             case .range26Plus: return "26歳以上"
             }
         }
+
+        /// displayNameのエイリアス（互換性のため）
+        var displayText: String {
+            displayName
+        }
     }
 
     /// 属性
@@ -65,6 +70,11 @@ struct Profile: Identifiable, Codable, Equatable {
             case .student: return "学生"
             case .worker: return "社会人"
             }
+        }
+
+        /// displayNameのエイリアス（互換性のため）
+        var displayText: String {
+            displayName
         }
     }
 

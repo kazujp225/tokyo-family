@@ -1,5 +1,8 @@
 import Foundation
 import Observation
+#if canImport(UIKit)
+import UIKit
+#endif
 
 /// マッチ画面ViewModel
 /// 画面ID: PG-40, PG-41 - マッチ一覧・詳細（0.4_ページ定義.md）
@@ -77,7 +80,6 @@ final class MatchViewModel {
         let webURL = URL(string: "https://instagram.com/\(instagramHandle)")
 
         #if canImport(UIKit)
-        import UIKit
         if let deepLink = deepLink, UIApplication.shared.canOpenURL(deepLink) {
             UIApplication.shared.open(deepLink)
         } else if let webURL = webURL {
